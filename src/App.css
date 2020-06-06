@@ -1,3 +1,5 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,58 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.inline-text--active {
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  background: inherit;
+  display: block;
+  cursor: pointer;
+  padding-top: 0.45em;
+}
+
+.inline-text--hidden {
+  display: none;
+}
+
+textarea.inline-edit--active {
+  height: auto;
+}
+
+.inline-edit-active {
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  background: inherit;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  height: calc(1.5em + 0.75rem + 2px);
+}
+
+textarea.inline-edit-active {
+  height: auto;
+}
+
+.inline-edit-active:focus {
+  background: inherit;
+  color: inherit;
+  outline: 0;
+  border-color: #8ad4ee;
+  box-shadow: 0 0 0 0.2rem rgba(32, 168, 216, 0.25);
+}
+
+.inline-edit-options {
+  float: right;
+  margin-top: 5px;
+  display: block;
+}
+
+.inline-edit-options button:first-child {
+  margin-right: 3px;
 }
