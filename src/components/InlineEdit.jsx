@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Button } from "reactstrap";
 import { useKeypress, useOnClickOutside } from "hooks";
 
 function InlineEdit(props) {
@@ -57,8 +56,8 @@ function InlineEdit(props) {
       {isInputActive && props.editView(editViewProps)}
       {isInputActive && (
         <span className="inline-edit-options">
-          <Button onClick={handleConfirm}>Y</Button>
-          <Button onClick={handleCancel}>N</Button>
+          <button onClick={handleConfirm}>Y</button>
+          <button onClick={handleCancel}>N</button>
         </span>
       )}
     </span>

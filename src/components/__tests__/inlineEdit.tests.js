@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { act } from "react-dom/test-utils";
 import { mount } from "enzyme";
-import { Button } from "reactstrap";
 import InlineEdit from "../InlineEdit";
 
 describe("InlineEdit Component", () => {
@@ -90,7 +89,7 @@ describe("InlineEdit Component", () => {
     editElement.simulate("change", { target: { value: defaultText } });
     const confirmButton = wrapper
       .find({ className: "inline-edit-options" })
-      .find(Button)
+      .find("button")
       .at(0);
     confirmButton.simulate("click");
 
@@ -201,7 +200,7 @@ describe("InlineEdit Component", () => {
     editElement.simulate("change", { target: { value: defaultText } });
     const cancelButton = wrapper
       .find({ className: "inline-edit-options" })
-      .find(Button)
+      .find("button")
       .at(1);
     cancelButton.simulate("click");
 
